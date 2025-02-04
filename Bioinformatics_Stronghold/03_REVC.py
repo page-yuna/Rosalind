@@ -11,7 +11,6 @@
 # url: https://rosalind.info/problems/revc/
 
 
-
 fpath = "./rosalind_revc.txt"
 with open(fpath, 'r') as f:
     seq = f.readline().strip()
