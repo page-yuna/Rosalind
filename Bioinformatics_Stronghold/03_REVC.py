@@ -8,7 +8,9 @@
 # Sample Dataset: "AAAACCCGGT"
 # Sample Output: "ACCGGGTTTT"
 
-# url: https://rosalind.info/problems/rna/
+# url: https://rosalind.info/problems/revc/
+
+
 
 fpath = "./rosalind_revc.txt"
 with open(fpath, 'r') as f:
