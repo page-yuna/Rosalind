@@ -8,7 +8,7 @@
 # Sample Dataset: "AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA"
 # Sample Output: "MAMAPRTEINSTRING"
 
-# url: https://rosalind.info/problems/PROT/
+# url: https://rosalind.info/problems/prot/
 
 
 from Bio.Seq import Seq
