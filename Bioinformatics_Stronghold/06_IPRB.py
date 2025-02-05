@@ -22,7 +22,7 @@ def calc_dominant_prob(k, m, n):
     total = k + m + n
     total_pairs = total * (total - 1)
     
-    prob_AA_AA = (k * (k-1)) * 1
+    prob_AA_AA = (k * (k - 1)) * 1
     prob_AA_Aa = (k * m + m * k) * 1
     prob_AA_aa = (k * n + n * k) * 1
     prob_Aa_Aa = (m * (m - 1)) * 0.75
@@ -31,11 +31,11 @@ def calc_dominant_prob(k, m, n):
     
     total_dominant = (prob_AA_AA + prob_AA_Aa + prob_AA_aa + prob_Aa_Aa + prob_Aa_aa + prob_aa_aa)
 
-    probability = total_dominant / total_pairs
-    return round(probability, 5)
+    prob = total_dominant / total_pairs
+    return round(prob, 5)
 
 with open("./rosalind_iprb.txt", "r") as f:
     k, m, n = map(int, f.readline().split())
 
-probability = calc_dominant_prob(k, m, n)
-print(f"{probability:.5f}")
+prob = calc_dominant_prob(k, m, n)
+print(f"{prob:.5f}")
