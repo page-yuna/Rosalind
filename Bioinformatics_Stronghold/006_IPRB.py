@@ -1,6 +1,6 @@
 ### Mendel's First Law
 # ID: IPRB
-# Topic: Probability
+# Topic: Heredity, Probability
 
 # Given: Two DNA strings s and t of equal length (not exceeding 1 kbp).
 # Return: The Hamming distance dH(s,t).
