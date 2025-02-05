@@ -1,4 +1,4 @@
-### Computing GC Content
+### Counting Point Mutations
 # ID: HAMM
 # Topic: Alignment
 
