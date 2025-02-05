@@ -12,7 +12,7 @@ ATAT
 """
 # Sample Output: "2 4 10"
 
-# url: https://rosalind.info/problems/FIB/
+# url: https://rosalind.info/problems/SUBS/
 
 
 def motif_location(seq, motif):
