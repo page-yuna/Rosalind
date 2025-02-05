@@ -28,13 +28,28 @@ Rosalind_0808
 # url: https://rosalind.info/problems/gc/
 
 
+def read_fasta(fasta_str):
+    sequences = {}
+    seq = ''
+    for line in fasta_str.strip().split('\n'):
+        if line.startswith('>'):
+            if seq:
+                sequences[chromosome] = seq
+                seq = ''
+            chromosome = line[1:]
+        else: seq += line.strip()
+    if seq:
+        sequences[chromosome] = seq
+    return sequences
+
 def process_fasta_file(fpath):
     with open(fpath, 'r') as f:
         fasta_f = f.read()
     fasta = read_fasta(fasta_f)
     gc_contents = {}
     for name in fasta:
-        gc_contents[name] = gc_content(fasta[name])
+        seq = fasta[name]
+        gc_contents[name] = (seq.count('G') + seq.count('C')) / len(seq) * 100
     max_gc_name = max(gc_contents, key=gc_contents.get)
     return max_gc_name, gc_contents[max_gc_name]
 
