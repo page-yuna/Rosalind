@@ -1,6 +1,6 @@
 ### Rabbits and Recurrence Relations
 # ID: FIB
-# Topic: Combinatorics
+# Topic: Combinatorics, Dynamic Programming
 
 # Given: Positive integers n≤40 and k≤5.
 # Return: The total number of rabbit pairs that will be present after n months,
