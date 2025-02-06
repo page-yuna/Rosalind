@@ -33,7 +33,7 @@ def rna_to_prot(rna_seq):
 
 def main():
     try:
-        with open("rosalind_prot.txt", "r") as f:
+        with open("./rosalind_prot.txt", "r") as f:
             rna_seq = f.readline().strip()
     except FileNotFoundError:
         print("Error: Input file not found.")
@@ -41,7 +41,7 @@ def main():
 
     protein = rna_to_prot(rna_seq)
     print(protein)
-
+    
 
 if __name__ == "__main__":
     main()
