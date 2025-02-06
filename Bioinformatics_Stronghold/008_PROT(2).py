@@ -18,26 +18,20 @@ def rna_to_prot(rna_seq):
         'UGG': 'W', 'CGG': 'R', 'AGG': 'R', 'GGG': 'G'
     }
 
-    protein_string = ""
+    protein_str = ""
     for i in range(0, len(rna_seq), 3):
         codon = rna_seq[i:i+3]
-        if len(codon) < 3:
-            return ""
-        amino = codon_table.get(codon)
-        if amino == 'Stop':
-            break
-        elif amino is not None:
-            protein_string += amino
-
-    return protein_string
+        if len(codon) == 3:
+            amino = codon_table.get(codon)
+            if amino == 'Stop': break
+            elif amino is not None:
+                protein_str += amino
+                
+    return protein_str
 
 def main():
-    try:
-        with open("./rosalind_prot.txt", "r") as f:
-            rna_seq = f.readline().strip()
-    except FileNotFoundError:
-        print("Error: Input file not found.")
-        return
+    with open("./rosalind_prot.txt", "r") as f:
+        rna_seq = f.readline().strip()
 
     protein = rna_to_prot(rna_seq)
     print(protein)
