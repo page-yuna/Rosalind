@@ -23,11 +23,11 @@ def rna_to_prot(rna_seq):
         codon = rna_seq[i:i+3]
         if len(codon) < 3:
             return ""
-        amino_acid = codon_table.get(codon)
-        if amino_acid == 'Stop':
+        amino = codon_table.get(codon)
+        if amino == 'Stop':
             break
-        elif amino_acid is not None:
-            protein_string += amino_acid
+        elif amino is not None:
+            protein_string += amino
 
     return protein_string
 
