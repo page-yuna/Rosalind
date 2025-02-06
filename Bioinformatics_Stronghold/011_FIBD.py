@@ -11,3 +11,19 @@
 # url: https://rosalind.info/problems/fibd/
 
 
+def mortal_fibo_rabbits(n, m):
+    rabbits = [0] * m
+    rabbits[0] = 1
+
+    for month in range(1, n):
+        offspring = sum(rabbits[1:])
+        for i in range(m-1, 0, -1):
+            rabbits[i] = rabbits[i - 1]
+
+        rabbits[0] = offspring
+
+    return sum(rabbits)
+
+n, m = ??
+result = mortal_fibo_rabbits(n, m)
+print(result)
